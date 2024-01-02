@@ -1,3 +1,5 @@
+import Feed from "@components/Feed";
+
 //br tag is kept hidden for the large devices and is used for smaller devices only
 const Home = () => {
     return (
@@ -15,6 +17,8 @@ const Home = () => {
                 writing prompts. It is a community-driven project that allows
                 users to share their own prompts and vote on the prompts.
             </p>
+
+            <Feed />
         </section>
     );
 };
