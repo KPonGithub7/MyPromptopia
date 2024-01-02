@@ -53,7 +53,7 @@ const Nav = () => {
                                 alt="Profile Picture"
                             />
                         </Link>
-                        {console.log(session?.user.name)}
+                        {/* {console.log(session?.user.name)} */}
                     </div>
                 ) : (
                     <>
