@@ -1,5 +1,15 @@
 import Feed from "@components/Feed";
 
+//To Add
+/* 
+    search feature 
+        by account          done
+        by prompt           done
+        by tag              done
+    view other's profile
+    tag click search        done
+*/
+
 //br tag is kept hidden for the large devices and is used for smaller devices only
 const Home = () => {
     return (
