@@ -21,7 +21,22 @@ const ProductCardList = ({ data, handleTagClick }) => {
 const Feed = () => {
     const [searchText, setSearchText] = useState("");
     const [posts, setPosts] = useState([]);
-    const handleSearchChange = (e) => {};
+    const [filteredPosts, setFilteredPosts] = useState([]);
+
+    const handleSearchChange = (e) => {
+        setSearchText(e.target.value);
+    };
+
+    useEffect(() => {
+        setFilteredPosts(
+            posts.filter(
+                (post) =>
+                    post.creator.username.toLowerCase().includes(searchText) ||
+                    post.prompt.toLowerCase().includes(searchText) ||
+                    post.tags.includes(searchText)
+            )
+        );
+    }, [searchText]);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -29,9 +44,15 @@ const Feed = () => {
             const data = await response.json();
 
             setPosts(data);
+            setFilteredPosts(data);
         };
         fetchPosts();
     }, []);
+
+    const handleTagClick = (tag) => {
+        setSearchText(tag);
+    };
+
     return (
         <section className="feed">
             <form className="relative w-full flex-center">
@@ -44,7 +65,10 @@ const Feed = () => {
                     className="peer search_input"
                 />
             </form>
-            <ProductCardList data={posts} handleTagClick={() => {}} />
+            <ProductCardList
+                data={filteredPosts}
+                handleTagClick={handleTagClick}
+            />
         </section>
     );
 };
