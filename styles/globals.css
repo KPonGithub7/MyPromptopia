@@ -8,6 +8,18 @@
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
 
+.cursor {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    pointer-events: none;
+    position: fixed;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+
 .main {
     width: 100vw;
     min-height: 100vh;
