@@ -3,8 +3,8 @@ import GoogleProvider from "next-auth/providers/google";
 import { connectToDB } from "@utils/database";
 import User from "@models/user";
 
-let url = "/";
-let baseUrl = "http://localhost:3000";
+// let url = "/";
+// let baseUrl = "http://localhost:3000";
 
 const handler = NextAuth({
     providers: [

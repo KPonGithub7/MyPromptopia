@@ -2,19 +2,25 @@
 
 import { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
+import Cursor from "./Cursor";
 // import { set } from "mongoose";
 
 const ProductCardList = ({ data, handleTagClick }) => {
+    const [hover, setHover] = useState(false);
     return (
-        <div className="prompt_layout mt-16 ">
-            {data.map((post) => (
-                <PromptCard
-                    key={post._id}
-                    post={post}
-                    handleTagClick={handleTagClick}
-                />
-            ))}
-        </div>
+        <>
+            <Cursor hover={hover} />
+            <div className="prompt_layout mt-16 ">
+                {data.map((post) => (
+                    <PromptCard
+                        hovering={setHover}
+                        key={post._id}
+                        post={post}
+                        handleTagClick={handleTagClick}
+                    />
+                ))}
+            </div>
+        </>
     );
 };
 

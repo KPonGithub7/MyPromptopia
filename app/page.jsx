@@ -1,3 +1,4 @@
+import Cursor from "@components/Cursor";
 import Feed from "@components/Feed";
 
 //To Add
@@ -13,7 +14,7 @@ import Feed from "@components/Feed";
 //br tag is kept hidden for the large devices and is used for smaller devices only
 const Home = () => {
     return (
-        <section className="w-full flex-center flex-col">
+        <section className="w-full flex-center flex-col relative">
             <h1 className="head_text text-center">
                 Discover & Share
                 <br className="max-md:hidden" />
