@@ -30,7 +30,7 @@ const CreatePrompt = () => {
                     tags: post.tags,
                 }),
             });
-            // console.log(response);
+
             if (response.ok) {
                 router.push("/");
             }
