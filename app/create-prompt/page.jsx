@@ -30,11 +30,6 @@ const CreatePrompt = () => {
                     tags: post.tags,
                 }),
             });
-<<<<<<< HEAD
-
-=======
-            // console.log(response);
->>>>>>> abb1da75d2c8570494129e186516f3cf61c8cae2
             if (response.ok) {
                 router.push("/");
             }
