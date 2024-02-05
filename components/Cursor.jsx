@@ -78,7 +78,7 @@ const Cursor = ({ hover }) => {
         <motion.div
             transformTemplate={template}
             ref={cursor}
-            className="cursor "
+            className="cursor max-md:hidden"
             style={{
                 top: smoothMouse.y,
                 left: smoothMouse.x,

@@ -22,11 +22,13 @@ const NewProfile = ({ params }) => {
     }, [params.id]);
 
     return (
-        <Profile
-            name={`${username}'s`}
-            desc={`Welcome to ${username}'s profile page!`}
-            data={posts}
-        />
+        <>
+            <Profile
+                name={`${username}'s`}
+                desc={`Welcome to ${username}'s profile page!`}
+                data={posts}
+            />
+        </>
     );
 };
 

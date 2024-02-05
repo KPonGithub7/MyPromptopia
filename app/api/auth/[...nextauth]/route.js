@@ -15,8 +15,6 @@ const handler = NextAuth({
     ],
     callbacks: {
         async session({ session }) {
-            //This is for when we want to keep the user logged in
-
             const SessionUser = await User.findOne({
                 email: session.user.email,
             });

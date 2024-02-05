@@ -14,7 +14,7 @@ const CreatePrompt = () => {
         prompt: "",
         tags: "",
     });
-    const [type, setType] = useState("");
+
     const [submitting, setSubmitting] = useState("");
 
     const creatPrompt = async (e) => {
@@ -42,14 +42,14 @@ const CreatePrompt = () => {
     };
     return (
         <>
-        <Form
-            type="Create"
-            post={post}
-            setPost={setPost}
-            submitting={submitting}
-            handleSubmit={creatPrompt}
+            <Form
+                type="Create"
+                post={post}
+                setPost={setPost}
+                submitting={submitting}
+                handleSubmit={creatPrompt}
             />
-            </>
+        </>
     );
 };
 

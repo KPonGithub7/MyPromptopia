@@ -34,7 +34,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
                             }
                             placeholder="Write your promp here..."
                             required
-                            className="form_textarea"
+                            className="form_textarea bg-zinc-200"
                         ></textarea>
                     </label>
                     <label>
@@ -48,7 +48,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
                             }
                             placeholder="#tags"
                             required
-                            className="form_input"
+                            className="form_input bg-zinc-200"
                         ></input>
                     </label>
                     <div className="flex flex-end gap-4 mx-3 mb-5 ">
