@@ -30,6 +30,7 @@ const Feed = () => {
     const [filteredPosts, setFilteredPosts] = useState([]);
 
     const handleSearchChange = (e) => {
+        e.preventDefault();
         setSearchText(e.target.value);
     };
 
@@ -68,7 +69,7 @@ const Feed = () => {
                     placeholder="Search for a tag or a prompt"
                     value={searchText}
                     onChange={handleSearchChange}
-                    className="peer search_input"
+                    className=" search_input "
                 />
             </form>
             <ProductCardList

@@ -29,7 +29,7 @@ const Nav = () => {
             </Link>
             {/* {alert(providers)} */}
             {/* Desktop navigation */}
-            <div className="sm:flex hidden">
+            <div className="sm:flex hidden ">
                 {session?.user ? (
                     <div className="flex gap-3 md:gap-5">
                         <Link href="/create-prompt" className="black_btn">
@@ -75,7 +75,7 @@ const Nav = () => {
             </div>
 
             {/* Mobile navigation */}
-            <div className="sm:hidden flex relative">
+            <div className="sm:hidden flex relative z-30">
                 {session?.user ? (
                     <div className="flex">
                         <Image

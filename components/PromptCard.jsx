@@ -34,7 +34,6 @@ const PromptCard = ({
     };
     return (
         <>
-            {/* <Cursor /> */}
             <div className="prompt_card">
                 <div className="flex items-center justify-between gap-5">
                     <div
