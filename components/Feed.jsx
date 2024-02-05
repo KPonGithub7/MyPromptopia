@@ -47,12 +47,16 @@ const Feed = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
+<<<<<<< HEAD
             const response = await fetch("/api/prompt", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
                 },
             });
+=======
+            const response = await fetch("/api/prompt");
+>>>>>>> abb1da75d2c8570494129e186516f3cf61c8cae2
             const data = await response.json();
 
             setPosts(data);
@@ -69,7 +73,10 @@ const Feed = () => {
         <section className="feed">
             <form className="relative w-full flex-center">
                 <input
+<<<<<<< HEAD
                     name="search"
+=======
+>>>>>>> abb1da75d2c8570494129e186516f3cf61c8cae2
                     type="text"
                     required
                     placeholder="Search for a tag or a prompt"

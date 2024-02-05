@@ -13,6 +13,10 @@ const NewProfile = ({ params }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await fetch(`/api/users/${params?.id}/posts`);
+<<<<<<< HEAD
+=======
+            console.log(`/api/users/${params?.id}/posts`);
+>>>>>>> abb1da75d2c8570494129e186516f3cf61c8cae2
             const data = await response.json();
 
             setPosts(data);

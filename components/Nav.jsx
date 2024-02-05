@@ -53,7 +53,11 @@ const Nav = () => {
                                 alt="Profile Picture"
                             />
                         </Link>
+<<<<<<< HEAD
 
+=======
+                        {/* {console.log(session?.user.name)} */}
+>>>>>>> abb1da75d2c8570494129e186516f3cf61c8cae2
                     </div>
                 ) : (
                     <>
