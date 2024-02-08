@@ -11,7 +11,7 @@ const ProductCardList = ({ data, handleTagClick }) => {
         <>
             <Cursor hover={hover} />
             <div className="prompt_layout mt-16 ">
-                {data.map((post) => (
+                {data?.map((post) => (
                     <PromptCard
                         hovering={setHover}
                         key={post._id}
