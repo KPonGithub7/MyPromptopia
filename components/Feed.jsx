@@ -38,7 +38,7 @@ const Feed = () => {
         setFilteredPosts(
             posts.filter(
                 (post) =>
-                    post.creator.username.toLowerCase().includes(searchText) ||
+                    post.creator?.username.toLowerCase().includes(searchText) ||
                     post.prompt.toLowerCase().includes(searchText) ||
                     post.tags.includes(searchText)
             )
