@@ -18,7 +18,7 @@ const NewProfile = ({ params }) => {
             setPosts(data);
         };
         if (params?.id) fetchPosts();
-    }, [params.id]);
+    }, []);
 
     return (
         <>

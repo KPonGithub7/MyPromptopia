@@ -32,7 +32,7 @@ const PromptCard = ({
             `profile/${post.creator?._id}?name=${post.creator?.username}`
         );
     };
-    console.log(post.creator?.image);
+
     return (
         <>
             <div className="prompt_card">
