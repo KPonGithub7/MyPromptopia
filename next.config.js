@@ -6,11 +6,26 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: "**",
+                hostname: "*",
                 // domain: ["lh3.googleusercontent.com"],
             },
         ],
     },
+    headers: [
+        {
+            source: "/api/prompt",
+            headers: [
+                {
+                    key: "Access-Control-Allow-Methods",
+                    value: "GET",
+                },
+                {
+                    key: "Access-Control-Allow-Origin",
+                    value: "https://my-promptopia-alpha.vercel.app/",
+                },
+            ],
+        },
+    ],
     webpack(config) {
         config.experiments = {
             ...config.experiments,
