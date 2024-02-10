@@ -19,18 +19,22 @@ const UpdatePrompt = () => {
     });
 
     useEffect(() => {
-        const getPromptDetails = async () => {
-            const response = await fetch(`/api/prompt/${promptId}`);
-            const data = await response.json();
+        try {
+            const getPromptDetails = async () => {
+                const response = await fetch(`/api/prompt/${promptId}`);
+                const data = await response.json();
 
-            setPost({
-                prompt: data.prompt,
-                tags: data.tags,
-            });
+                setPost({
+                    prompt: data.prompt,
+                    tags: data.tags,
+                });
 
-            setType("Edit");
-        };
-        if (promptId) getPromptDetails();
+                setType("Edit");
+            };
+            if (promptId) getPromptDetails();
+        } catch (error) {
+            console.log(error.message);
+        }
     }, [promptId]);
 
     const updatePrompt = async (e) => {

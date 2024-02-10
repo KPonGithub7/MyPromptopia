@@ -12,15 +12,19 @@ const MyProfile = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            const response = await fetch(
-                `/api/users/${session?.user.id}/posts`
-            );
-            const data = await response.json();
+        try {
+            const fetchPosts = async () => {
+                const response = await fetch(
+                    `/api/users/${session?.user.id}/posts`
+                );
+                const data = await response.json();
 
-            setPosts(data);
-        };
-        if (session?.user.id) fetchPosts();
+                setPosts(data);
+            };
+            if (session?.user.id) fetchPosts();
+        } catch (error) {
+            console.log(error.message);
+        }
     }, []);
 
     const handleEdit = (post) => {

@@ -11,13 +11,17 @@ const NewProfile = ({ params }) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            const response = await fetch(`/api/users/${params?.id}/posts`);
-            const data = await response.json();
+        try {
+            const fetchPosts = async () => {
+                const response = await fetch(`/api/users/${params?.id}/posts`);
+                const data = await response.json();
 
-            setPosts(data);
-        };
-        if (params?.id) fetchPosts();
+                setPosts(data);
+            };
+            if (params?.id) fetchPosts();
+        } catch (error) {
+            console.log(error.message);
+        }
     }, []);
 
     return (

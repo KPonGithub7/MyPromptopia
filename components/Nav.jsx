@@ -8,11 +8,15 @@ const Nav = () => {
     const { data: session } = useSession();
     const [providers, setProviders] = useState(null);
     useEffect(() => {
-        const setUpProviders = async () => {
-            const response = await getProviders();
-            setProviders(response);
-        };
-        setUpProviders();
+        try {
+            const setUpProviders = async () => {
+                const response = await getProviders();
+                setProviders(response);
+            };
+            setUpProviders();
+        } catch (error) {
+            console.log(error.message);
+        }
     }, []);
     const [toggleDropdown, setToggleDropdown] = useState(false);
     return (
