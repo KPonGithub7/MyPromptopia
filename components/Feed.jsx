@@ -46,20 +46,24 @@ const Feed = () => {
     }, [searchText]);
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            const response = await fetch("/api/prompt", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            });
+        try {
+            const fetchPosts = async () => {
+                const response = await fetch("/api/prompt", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
 
-            const data = await response.json();
+                const data = await response.json();
 
-            setPosts(data);
-            setFilteredPosts(data);
-        };
-        fetchPosts();
+                setPosts(data);
+                setFilteredPosts(data);
+            };
+            fetchPosts();
+        } catch (error) {
+            console.log(error);
+        }
     }, []);
 
     const handleTagClick = (tag) => {
